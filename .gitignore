@@ -1,0 +1,25 @@
+# Build outputs
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.csproj.user
+
+# Rider
+.idea/
+*.sln.iml
+
+# Common IDE files
+*.swp
+*~
+.DS_Store

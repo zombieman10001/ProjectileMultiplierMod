@@ -1,4 +1,5 @@
 using HarmonyLib;
+using System;
 using System.Reflection;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
@@ -13,19 +14,42 @@ namespace ProjectileMultiplierMod
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
-            _harmony = new Harmony("ProjectileMultiplierMod.Harmony");
-            _harmony.PatchAll(Assembly.GetExecutingAssembly());
+
+            try
+            {
+                _harmony = new Harmony("ProjectileMultiplierMod.Harmony");
+                _harmony.PatchAll(Assembly.GetExecutingAssembly());
+            }
+            catch (Exception ex)
+            {
+                InformationManager.DisplayMessage(
+                    new InformationMessage($"[Projectile Multiplier] Error loading mod: {ex.Message}", Colors.Red));
+            }
         }
 
         protected override void OnGameStart(Game game, IGameStarter starterObject)
         {
-            base.OnGameStart(game, starterObject);
-            InformationManager.DisplayMessage(new InformationMessage("[ProjectileMultiplier] Loaded"));
+            try
+            {
+                base.OnGameStart(game, starterObject);
+                InformationManager.DisplayMessage(
+                    new InformationMessage("[Projectile Multiplier] Loaded", Colors.Green));
+            }
+            catch (Exception ex)
+            {
+                InformationManager.DisplayMessage(
+                    new InformationMessage($"[Projectile Multiplier] Error on game start: {ex.Message}", Colors.Red));
+            }
         }
 
         protected override void OnSubModuleUnloaded()
         {
-            _harmony?.UnpatchAll(_harmony.Id);
+            try
+            {
+                _harmony?.UnpatchAll(_harmony.Id);
+            }
+            catch { }
+            
             base.OnSubModuleUnloaded();
         }
     }
