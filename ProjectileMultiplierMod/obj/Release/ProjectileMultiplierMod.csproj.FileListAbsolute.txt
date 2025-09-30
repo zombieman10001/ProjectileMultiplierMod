@@ -1,0 +1,10 @@
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\ProjectileMultiplierMod\bin\Win64_Shipping_Client\ProjectileMultiplierMod.deps.json
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\ProjectileMultiplierMod\bin\Win64_Shipping_Client\ProjectileMultiplierMod.dll
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\ProjectileMultiplierMod\bin\Win64_Shipping_Client\ProjectileMultiplierMod.pdb
+b:\Minecraft Mod\ProjectileMultiplierMod\obj\Release\ProjectileMultiplierMod.csproj.AssemblyReference.cache
+b:\Minecraft Mod\ProjectileMultiplierMod\obj\Release\ProjectileMultiplierMod.GeneratedMSBuildEditorConfig.editorconfig
+b:\Minecraft Mod\ProjectileMultiplierMod\obj\Release\ProjectileMultiplierMod.csproj.CoreCompileInputs.cache
+b:\Minecraft Mod\ProjectileMultiplierMod\obj\Release\ProjectileMultiplierMod.dll
+b:\Minecraft Mod\ProjectileMultiplierMod\obj\Release\refint\ProjectileMultiplierMod.dll
+b:\Minecraft Mod\ProjectileMultiplierMod\obj\Release\ProjectileMultiplierMod.pdb
+b:\Minecraft Mod\ProjectileMultiplierMod\obj\Release\ref\ProjectileMultiplierMod.dll
