@@ -1,43 +1,64 @@
-# Projectile Multiplier Mod (Skeleton)
+# Projectile Multiplier Mod
 
-This is a starter Bannerlord mod that multiplies projectiles fired per shot (player & NPC) with in-game sliders via MCM.
+A Mount & Blade II: Bannerlord mod that multiplies projectiles fired per shot for both players and NPCs with configurable settings via MCM.
 
 ## Features
-- Separate player & NPC multipliers.
-- Normal range (1-10) plus optional extreme (up to 100).
-- Reflection-based patch now (slower); can be replaced with explicit method once you provide signature.
+- Separate multipliers for player and NPCs
+- Normal range (1-10) and extreme mode (up to 100)
+- Optional random spread for projectiles
+- Hard safety cap for NPCs to prevent performance issues
+- One-time warning when extreme mode is active
+- Built with Harmony for compatibility
 
 ## Requirements
-Install these mods/libraries in Bannerlord `Modules/` and reference their DLLs when building:
-- Harmony (0Harmony.dll) (usually included by other mods)
-- Mod Configuration Menu (MCM v5 for Bannerlord 1.2.x)
+Install these dependencies in Bannerlord's `Modules/` folder:
+- **Harmony** (0Harmony.dll) - Usually included with other mods
+- **Mod Configuration Menu (MCM v5)** - For in-game configuration
 
-## Folder Layout
-```
-ProjectileMultiplierMod/
-  SubModule.xml
-  YourModName.csproj
-  src/
-    SubModule.cs
-    Settings.cs
-    Patches.AddMissile.cs
-  bin/Win64_Shipping_Client/ (build output will place DLL here)
-```
+## Installation
+1. Download the latest release
+2. Extract to `Mount & Blade II Bannerlord/Modules/`
+3. Enable the mod in the Bannerlord launcher
+4. Configure settings in-game via MCM Options
 
-## Build
-Open the `.csproj` in Visual Studio (net472). Define environment variable `BANNERLORD_BIN` to point to your Bannerlord `bin/Win64_Shipping_Client/` (or edit .csproj HintPaths manually).
+## Configuration
+Access settings through **Mod Options > Projectile Multiplier** in-game:
 
-Example (PowerShell, temporary for session):
-```
-$env:BANNERLORD_BIN = "C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\bin\Win64_Shipping_Client\\"
-```
-Then build in Release. The post-build target copies DLL to module output folder.
+### Player Settings
+- **Use Extreme Multiplier**: Enable extreme mode (up to 100 projectiles)
+- **Multiplier (Normal)**: 1-10 projectiles per shot
+- **Multiplier (Extreme)**: 1-100 projectiles per shot
 
-## Usage
-Enable Harmony, MCM, then this mod in launcher. Adjust multipliers in MCM > Projectile Multiplier.
+### NPC Settings
+- **Use Extreme Multiplier**: Enable extreme mode for NPCs
+- **Multiplier (Normal)**: 1-10 projectiles
+- **Multiplier (Extreme)**: 1-100 projectiles
+- **Hard Safety Cap**: Maximum projectiles regardless of settings
 
-## Next Step
-Provide actual `SpawnMissile` (or related) method signature(s) so we can replace the reflection patch with a faster, stable patch.
+### Other Options
+- **Slight Random Spread**: Add variation to projectile direction
+- **Show Extreme Warning**: Display warning when extreme mode is active
+- **Multiply Thrown Weapons**: Apply multiplier to thrown weapons (experimental)
+
+## Building from Source
+1. Open `ProjectileMultiplierMod.csproj` in Visual Studio
+2. Update DLL reference paths in the .csproj to match your Bannerlord installation
+3. Build in Release configuration
+4. The DLL will be copied to the appropriate module folder
+
+## Performance Notes
+- Default multiplier values are set to 3 for balanced gameplay
+- Extreme values (50-100) can significantly impact performance
+- NPC hard cap prevents AI from overwhelming the game
+- Use extreme mode with caution in large battles
+
+## Compatibility
+- Built for Mount & Blade II: Bannerlord e1.2.x+
+- Uses Harmony patching for broad compatibility
+- Compatible with most other mods
+
+## Credits
+Built with reference to best practices from the [NobleKillerExtended](https://github.com/Danqna/NobleKillerExtended) mod.
 
 ## Disclaimer
-Extreme values can heavily impact performance or stability.
+Extreme multiplier values can heavily impact game performance and stability. Use at your own risk.
