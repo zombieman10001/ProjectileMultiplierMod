@@ -3,8 +3,8 @@
   <Name value="Projectile Multiplier Mod" />
   <Id value="ProjectileMultiplierMod" />
   <Version value="1.0.0" />
-  <SingleplayerModule value="true" />
-  <MultiplayerModule value="false" />
+  <SinglePlayerModule value="true" />
+  <MultiPlayerModule value="false" />
   <DependedModules>
     <DependedModule Id="Native" />
     <DependedModule Id="SandBoxCore" />
