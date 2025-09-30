@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+  <Name value="Projectile Multiplier Mod" />
+  <Id value="ProjectileMultiplierMod" />
+  <Version value="1.0.0" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
+  <DependedModules>
+    <DependedModule Id="Native" />
+    <DependedModule Id="SandBoxCore" />
+    <DependedModule Id="SandBox" />
+    <DependedModule Id="StoryMode" />
+    <DependedModule Id="Bannerlord.MBOptionScreen" Optional="true" />
+    <DependedModule Id="Harmony" Optional="true" />
+  </DependedModules>
+  <SubModules>
+    <SubModule>
+      <Name value="Projectile Multiplier Core" />
+      <DLLName value="ProjectileMultiplierMod.dll" />
+      <!-- MUST match namespace + class in SubModule.cs -->
+      <SubModuleClassType value="ProjectileMultiplierMod.SubModule" />
+      <Tags><Tag key="DedicatedServerType" value="none" /></Tags>
+    </SubModule>
+  </SubModules>
+  <Credits />
+</Module>
