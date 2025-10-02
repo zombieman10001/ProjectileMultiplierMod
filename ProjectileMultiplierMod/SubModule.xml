@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Module>
-  <Name value="Projectile Multiplier Mod" />
+  <Name value="ProjectileMultiplierMod" />
   <Id value="ProjectileMultiplierMod" />
   <Version value="1.0.0" />
   <SinglePlayerModule value="true" />
@@ -15,7 +15,7 @@
   </DependedModules>
   <SubModules>
     <SubModule>
-      <Name value="Projectile Multiplier Core" />
+      <Name value="ProjectileMultiplierCore" />
       <DLLName value="ProjectileMultiplierMod.dll" />
       <!-- MUST match namespace + class in SubModule.cs -->
       <SubModuleClassType value="ProjectileMultiplierMod.SubModule" />
@@ -24,3 +24,4 @@
   </SubModules>
   <Credits />
 </Module>
+
