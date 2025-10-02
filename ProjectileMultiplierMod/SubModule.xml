@@ -2,26 +2,32 @@
 <Module>
   <Name value="ProjectileMultiplierMod" />
   <Id value="ProjectileMultiplierMod" />
-  <Version value="1.0.0" />
-  <SinglePlayerModule value="true" />
-  <MultiPlayerModule value="false" />
+  <Version value="0.0.1" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
+  <!-- Official (TaleWorlds) modules this mod depends on -->
   <DependedModules>
     <DependedModule Id="Native" />
     <DependedModule Id="SandBoxCore" />
-    <DependedModule Id="SandBox" />
+    <DependedModule Id="Sandbox" />
     <DependedModule Id="StoryMode" />
+    <!-- Optional community/BLSE modules -->
     <DependedModule Id="Bannerlord.MBOptionScreen" Optional="true" />
-    <DependedModule Id="Harmony" Optional="true" />
+    <DependedModule Id="Bannerlord.Harmony" Optional="true" />
   </DependedModules>
   <SubModules>
     <SubModule>
       <Name value="ProjectileMultiplierCore" />
       <DLLName value="ProjectileMultiplierMod.dll" />
-      <!-- MUST match namespace + class in SubModule.cs -->
       <SubModuleClassType value="ProjectileMultiplierMod.SubModule" />
-      <Tags><Tag key="DedicatedServerType" value="none" /></Tags>
+      <Tags>
+        <Tag key="DedicatedServerType" value="none" />
+      </Tags>
     </SubModule>
   </SubModules>
-  <Credits />
+  <Xmls/>
+  <Credits/>
 </Module>
+
+
 
